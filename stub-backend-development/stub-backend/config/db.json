@@ -1,0 +1,55 @@
+{
+  "country": [
+    {
+      "id": "1234",
+      "auth": false,
+      "description": "Get code about fiji",
+
+      "dataCountry":[
+        {
+          "code": "population",
+          "description":"1000 people"
+        },
+        {
+          "code": "cities",
+          "description":"10 cities"
+        }
+      ]
+
+    },
+    {
+      "id": "1235",
+      "auth": false,
+      "description": "Get code about spain",
+
+      "dataCountry":[
+        {
+          "code": "population",
+          "description":"100000 people"
+        },
+        {
+          "code": "cities",
+          "description":"100 cities"
+        }
+      ]
+    },
+    {
+      "id": "1236",
+      "auth": false,
+      "description": "Get code about andorra",
+
+      "dataCountry":[
+        {
+          "code": "population",
+          "description":"10000 people"
+        },
+        {
+          "code": "cities",
+          "description":"10 cities"
+        }
+      ]
+    }
+  ]
+
+
+}
