@@ -1,11 +1,8 @@
 package com.test.testapplication.controller;
 
-import com.test.testapplication.service.InformationService;
+import com.test.testapplication.StubServices;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.BDDMockito;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,16 +15,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
-public class InformationControllerIT {
+public class InformationControllerIT extends StubServices{
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
     public void handleRequest() throws Exception {
+        stubCountryDescriptionServiceForCode1235();
         mockMvc.perform(get("/information")
-                    .param("country", "fiji")
-                    .param("description", "population"))
+                    .param("country", "spain")
+                    .param("description", "cities"))
                 .andExpect(status().is2xxSuccessful());
     }
 }

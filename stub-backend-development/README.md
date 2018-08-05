@@ -1,6 +1,6 @@
 STUB BACKEND (WIP)
 ============
-* **Description** The aim of this project is to _mock the backend_  building different responses with authentication and different status.
+* **Description** The aim of this project is to _mock the backend_  building different __files.responses with authentication and different status.
 
 * Based on json server module (https://www.npmjs.com/package/json-server) which behind is using express framework. 
 
@@ -25,7 +25,7 @@ HOW TO USE IT
         b) description (this is optional)
             add a brief description of the request
 
-* Once you have completed last 2 steps, you just need to add your responses and run it using the following command:
+* Once you have completed last 2 steps, you just need to add your __files.responses and run it using the following command:
             ```node stub-backend/server.js```
 
 * Be aware of the file _server.js_, it is manage the request. Take care changing this file.

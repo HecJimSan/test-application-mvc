@@ -1,6 +1,7 @@
-package com.test.testapplication.bdd;
+package com.test.testapplication.bdd.stepDefinitions;
 
 
+import com.test.testapplication.bdd.CucumberRoot;
 import com.test.testapplication.controller.InfoDetailsDTO;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -17,6 +18,13 @@ public class InformationSteps extends CucumberRoot {
     private String descriptionSelection;
     private InfoDetailsDTO infoDetails;
     private String uri;
+
+
+    @Given("^Stub service for (\\d+) code$")
+    public void stub_service_for_code(int arg1) throws Throwable {
+        startService();
+        stubCountryDescriptionServiceForCode1235();
+    }
 
     @Given("^a client wants to get relevant data about ([^\\\\s]+) and ([^\\\\s]+)")
     public void a_client_wants_to_get_relevant_data_about(String country, String description) throws Throwable {
@@ -40,10 +48,8 @@ public class InformationSteps extends CucumberRoot {
 
     @Then("^the client receives the data$")
     public void the_client_receives_the_data() throws Throwable {
+        resetService();
         Assert.assertEquals(CODE_MESSAGE, infoDetails.getCode(), "1235");
-        Assert.assertEquals(DESCRIPTION_MESSAGE, infoDetails.getDescription(), "100000 people");
+        Assert.assertEquals(DESCRIPTION_MESSAGE, infoDetails.getDescription(), "1000 people");
     }
-
-
-
 }

@@ -4,7 +4,6 @@ import com.test.testapplication.repository.dto.CountryDTO;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 

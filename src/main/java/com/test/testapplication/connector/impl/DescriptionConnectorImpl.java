@@ -10,18 +10,18 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class DescriptionConnectorImpl implements DescriptionConnector {
 
-    @Value("${url}")
-    private String url;
+    private String endpoint;
 
     private RestTemplate restTemplate;
 
-    public DescriptionConnectorImpl(RestTemplate restTemplate) {
+    public DescriptionConnectorImpl(RestTemplate restTemplate, @Value("${description.country}") String endpoint) {
         this.restTemplate = restTemplate;
+        this.endpoint = endpoint;
     }
 
     @Override
     public DataCountryDTO getDescriptionList(String codeCountry) {
-        ResponseEntity<DataCountryDTO> responseEntity = restTemplate.getForEntity(url + "/country/" + codeCountry, DataCountryDTO.class);
+        ResponseEntity<DataCountryDTO> responseEntity = restTemplate.getForEntity(endpoint + "/country/" + codeCountry, DataCountryDTO.class);
         return responseEntity.getBody();
     }
 }
