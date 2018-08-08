@@ -12,4 +12,6 @@ Note: I use this express project in order to mock service. I could have selected
 
 - Lombok
 - Swagger - http://localhost:8080/swagger-ui.html
+ I follow: https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
+
 ****UNDER CONSTRUCTION****
