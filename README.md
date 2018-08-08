@@ -10,4 +10,6 @@ DEPENDENCIES
 
 Note: I use this express project in order to mock service. I could have selected wiremock as standalone as well.
 
+- Lombok
+- Swagger - http://localhost:8080/swagger-ui.html
 ****UNDER CONSTRUCTION****
